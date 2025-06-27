@@ -63,6 +63,18 @@ def prob_list(num):
         t=np.ones(num_og)
     np.random.shuffle(t)
     return t
+
+
+
+def part_gen_num_nodes(num,grp_num):
+    nr_group=scipy.stats.randint(1,grp_num).rvs()
+    t=[]
+    for x in range(num):
+        t.append(np.random.randint(0,nr_group))
+    '''print(t)
+    print(nr_group)'''
+    return np.array(t)
+
 print(prob_list(20))
 def part_covering(par):
     parm=create_part_matr(np.transpose(par))@np.ones((len(par),1))
@@ -156,6 +168,7 @@ reg_params=[0.5]
 d_mcmc={}
 thr={}
 d_cm={}
+grp_nums={}
 d_reg={}
 for x in range(64):
     g = nx.generators.random_graphs.erdos_renyi_graph(64, 0.5)
@@ -183,7 +196,8 @@ for x in range(64):
         probs=np.ones(leng)
         probs=prob_list(leng)
         probs/=sum(probs)   
-        partition=np.random.choice(range(leng),64,p=probs)
+        #partition=np.random.choice(range(leng),64,p=probs)
+        partition=part_gen_num_nodes(leng,8)
         np.random.seed(int.from_bytes(os.urandom(4), byteorder='little'))
         curr_len=np.random.randint(20,110)
         curr_len=250
@@ -313,7 +327,7 @@ for x in range(64):
     A_inf=deg_based_inference(X_s[0])
     #print('eval eval',eval_inf(A,A_inf),r,part_covering(partition))
     d_cm[part_covering(partition)-np.abs(np.random.normal(0,0.000001,1)[0])]=eval_inf(A,A_inf)
-    
+    grp_nums[part_covering(partition)-np.abs(np.random.normal(0,0.000001,1)[0])]=len(list(set(partition)))
     temp={}
     for r in reg_params:
         
@@ -411,3 +425,6 @@ plt.xlabel('Internal edge fraction',size=18)
 plt.ylabel('AUC',size=18)
 plt.savefig('Inference_baselines.svg')
 plt.savefig('Inference_baselines.pdf')
+
+
+np.save('group_sizes.npy',grp_nums,allow_pickle=True)
