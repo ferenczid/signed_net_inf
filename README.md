@@ -39,8 +39,8 @@ jupyter nbconvert --to notebook --execute signed_inference_tutorial.ipynb --outp
 | Folder | Contents |
 |---|---|
 | `tutorial_notebook/` | Step-by-step example of the inference method on a small network |
-| `baselines/` | <<What baseline_script.py compares against and what it outputs>> |
-| `real_life_experiments/` | <<Experiments on the high-school contact data: scripts and notebooks>> |
+| `baselines/` | Baseline comparison experiments |
+| `real_life_experiments/` | Empirical data experiments |
 
 Each folder contains its own copy of `signed_inference.py` (the copies in `tutorial_notebook/` and `baselines/` are identical; `real_life_experiments/` has a modified version). Run scripts from inside their own folder, because they import this module locally.
 
