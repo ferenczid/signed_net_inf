@@ -44,11 +44,6 @@ jupyter nbconvert --to notebook --execute signed_inference_tutorial.ipynb --outp
 
 Each folder contains its own copy of `signed_inference.py` (the copies in `tutorial_notebook/` and `baselines/` are identical; `real_life_experiments/` has a modified version). Run scripts from inside their own folder, because they import this module locally.
 
-## Reproducing the paper
-
-| Paper figure / table | Script or notebook | Approx. runtime |
-|---|---|---|
-| <<Fig. X>> | <<`real_life_experiments/post_pred.ipynb`>> | <<...>> |
 
 ## Data
 
