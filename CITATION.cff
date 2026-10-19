@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated paper."
+title: "signed_net_inf"
+type: software
+authors:
+  - family-names: "Ferenczi"
+    given-names: "Dávid"
+license: MIT
+repository-code: "https://github.com/ferenczid/signed_net_inf"
+preferred-citation:
+  doi: "10.1088/2632-072X/ae76ae"
+  type: article
+  title: "Inferring signed social networks from contact patterns"
+  authors:
+    - family-names: "Ferenczi"
+      given-names: "Dávid"
+    - family-names: "Young"
+      given-names: "Jean-Gabriel"
+    - family-names: "Peel"
+      given-names: "Leto"
+  journal: "Journal of Physics: Complexity"
+  year: 2026

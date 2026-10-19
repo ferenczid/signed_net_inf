@@ -4,7 +4,7 @@ Bayesian inference of signed social networks from contact patterns.
 
 Code accompanying:
 
-> D. Ferenczi, J.-G. Young, L. Peel. **Inferring signed social networks from contact patterns.** *Journal of Physics: Complexity*, 2026. <<DOI or URL>>
+> D. Ferenczi, J.-G. Young, L. Peel. **Inferring signed social networks from contact patterns.** *Journal of Physics: Complexity*, 2026. https://doi.org/10.1088/2632-072X/ae76ae
 
 ## Installation
 
@@ -66,6 +66,7 @@ If you use this code, please cite the paper above.
   title   = {Inferring signed social networks from contact patterns},
   author  = {Ferenczi, D{\'a}vid and Young, Jean-Gabriel and Peel, Leto},
   journal = {Journal of Physics: Complexity},
+  doi     = {10.1088/2632-072X/ae76ae}
   year    = {2026}
 }
 ```
