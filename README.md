@@ -61,7 +61,7 @@ If you use this code, please cite the paper above.
   title   = {Inferring signed social networks from contact patterns},
   author  = {Ferenczi, D{\'a}vid and Young, Jean-Gabriel and Peel, Leto},
   journal = {Journal of Physics: Complexity},
-  doi     = {10.1088/2632-072X/ae76ae}
+  doi     = {10.1088/2632-072X/ae76ae},
   year    = {2026}
 }
 ```
